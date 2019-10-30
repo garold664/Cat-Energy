@@ -6,6 +6,7 @@
 
   &__row {
     padding-top: 12px;
+    padding-bottom: 16px;
   }
 
   &__nav-btn {
@@ -69,5 +70,54 @@
 
   &__nav-btn--opened &__nav-btn-bar:nth-of-type(2) {
     transform: scaleX(0);
+  }
+
+  &__content {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      min-height: 305px;
+      background-color: #63a73a;
+      background-repeat: no-repeat;
+      background-image: url("../img/bg-header.jpg");
+      background-position: 50% 0;
+    }
+  }
+
+  &__title {
+    @include reset;
+    padding-top: 25px;
+    line-height: 38px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  &__lead {
+    padding-top: 23px;
+    font-family: $oswald;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  &__img {
+    margin-top: 30px;
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    margin-top: 2px;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 }
