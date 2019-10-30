@@ -23,13 +23,14 @@
     "gulp-postcss": "^8.0.x",
     "gulp-rename": "^1.4.x",
     "gulp-sass": "^4.0.x",
-    "node-sass": "^4.12.x",
     "gulp-sourcemaps": "^2.6.x",
     "gulp-uglify": "^3.0.x",
-    "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "node-sass": "^4.12.x",
+    "stylelint": "^10.1.0",
+    "stylelint-config-htmlacademy": "^0.1.4"
   },
   "scripts": {
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "editorconfig-tools check *",
     "build": "gulp build",
     "start": "npm run build && gulp serve"
