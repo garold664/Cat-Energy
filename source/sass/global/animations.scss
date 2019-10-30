@@ -1,5 +1,29 @@
-$opensans: "Open Sans", Arial, sans-serif;
+@keyframes rotateBtn {
+  0% {
+    transform: rotateZ(0);
+  }
 
-$arial: Arial, sans-serif;
+  50% {
+    transform: rotateZ(135deg);
+  }
+
+  100% {
+    transform: rotateZ(135deg);
+  }
+}
+
+@keyframes rotateBtnBar {
+  0% {
+    transform: translateY(8px) rotateZ(0);
+  }
+
+  50% {
+    transform: translateY(8px) rotateZ(0);
+  }
+
+  100% {
+    transform: translateY(8px) rotateZ(-90deg);
+  }
+}
 
 

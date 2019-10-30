@@ -1,0 +1,73 @@
+.page-header {
+  &__container {
+    @include container;
+    position: relative;
+  }
+
+  &__row {
+    padding-top: 12px;
+  }
+
+  &__nav-btn {
+    @include button-reset;
+    position: absolute;
+    top: 23px;
+    right: 20px;
+    width: 24px;
+    height: 18px;
+
+    outline: none;
+  }
+
+  &__nav-btn-bar {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #000000;
+    left: 0;
+    top: 0;
+    transform: translateY(0) rotateZ(0);
+    transition: top 0.1s ease-in,
+                transform 0.3s ease-in 0.1s;
+  }
+
+  &__nav-btn-bar:nth-of-type(2) {
+    transform: scaleX(1);
+    top: 8px;
+  }
+
+  &__nav-btn-bar:last-of-type {
+    top: 16px;
+  }
+
+  &__nav-btn:hover {
+    opacity: 0.6;
+  }
+
+  &__nav-btn:active {
+    opacity: 0.4;
+  }
+
+  &__nav-btn--opened {
+    // transform: rotateZ(45deg);
+
+    // animation: rotateBtn 0.6s;
+  }
+
+  &__nav-btn--opened &__nav-btn-bar:last-of-type {
+    top: 8px;
+    transform: rotateZ(135deg);
+  }
+
+  &__nav-btn--opened &__nav-btn-bar:first-of-type {
+    top: 8px;
+    transform: rotateZ(-135deg);
+
+    // animation: rotateBtnBar 0.6s;
+  }
+
+  &__nav-btn--opened &__nav-btn-bar:nth-of-type(2) {
+    transform: scaleX(0);
+  }
+}
