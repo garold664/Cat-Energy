@@ -1,6 +1,57 @@
 .page-nav {
-  display: none;
   @media (max-width: $mobile-width-only) {
     display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+
+    margin-left: auto;
+
+    &__list {
+      @include ul-reset;
+      padding-top: 8px;
+      margin-right: -36px;
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
+      align-items: center;
+    }
+
+    &__item {
+      margin-right: 36px;
+    }
+
+    &__link {
+      @include link-reset;
+      display: inline-block;
+      font-family: $oswald;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      color: $black1;
+
+      &:hover {
+        color: rgba($black1, 0.6);
+      }
+
+      &:active {
+        color: rgba($black1, 0.3);
+      }
+    }
+
+    &__link--active {
+      position: relative;
+      pointer-events: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -9px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: $green;
+      }
+    }
   }
 }

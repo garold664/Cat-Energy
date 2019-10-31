@@ -74,6 +74,7 @@
 
   &__content {
     position: relative;
+    text-align: center;
 
     &::before {
       content: "";
@@ -93,7 +94,6 @@
     @include reset;
     padding-top: 25px;
     line-height: 38px;
-    text-align: center;
     color: #ffffff;
   }
 
@@ -103,7 +103,6 @@
     font-size: 14px;
     line-height: 1;
     text-transform: uppercase;
-    text-align: center;
     color: #ffffff;
   }
 
@@ -117,7 +116,69 @@
     margin-top: 2px;
     font-size: 14px;
     line-height: 18px;
-    padding-top: 11px;
-    padding-bottom: 11px;
+    padding: 11px 26px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &__row {
+      display: flex;
+      padding-top: 24px;
+    }
+
+    &__nav-btn {
+      display: none;
+    }
+
+    &__content {
+      text-align: left;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__content::before {
+      content: none;
+    }
+
+    &__title {
+      padding-top: 44px;
+      padding-left: 90px;
+      width: 516px;
+      font-size: 60px;
+      line-height: 1;
+      color: $black1;
+    }
+
+    &__lead {
+      padding-top: 40px;
+      padding-left: 90px;
+      padding-bottom: 45px;
+      width: 516px;
+      font-size: 20px;
+      line-height: 1;
+      color: $black1;
+    }
+
+    &__pic {
+      order: 10;
+    }
+
+    &__img {
+      margin-top: -80px;
+    }
+
+    &__btn {
+      position: relative;
+      z-index: 1;
+      align-self: flex-start;
+      width: auto;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      margin-left: 90px;
+      font-size: 20px;
+      line-height: 1;
+    }
   }
 }
