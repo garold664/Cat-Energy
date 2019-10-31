@@ -1,0 +1,130 @@
+.advantages {
+  @include container;
+  padding-bottom: 22px;
+
+  &__list {
+    @include ul-reset;
+  }
+
+  &__title {
+    padding-bottom: 28px;
+  }
+
+  &__text {
+    @include reset;
+    position: relative;
+    padding-left: 80px;
+    padding-bottom: 26px;
+    font-family: $arial;
+    font-size: 14px;
+    line-height: 18px;
+    color: $black4;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-color: $green;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+
+  &__item:nth-child(1) &__text::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &__item:nth-child(2) &__text::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &__item:nth-child(3) &__text::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &__item:nth-child(4) &__text::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+
+    &__text::after {
+      background-size: 50px 50px;
+    }
+
+    &__item:nth-child(1) &__text::before {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+
+    &__item:nth-child(2) &__text::before {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+
+    &__item:nth-child(3) &__text::before {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+
+    &__item:nth-child(4) &__text::before {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      position: relative;
+      width: 324px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        display: block;
+        font-size: 281px;
+        line-height: 1;
+        color: #f2f2f2;
+      }
+    }
+
+    &__item:nth-child(1)::before {
+      content: "1";
+    }
+
+    &__item:nth-child(2)::before {
+      content: "2";
+    }
+
+    &__item:nth-child(3)::before {
+      content: "3";
+    }
+
+    &__item:nth-child(4)::before {
+      content: "4";
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+
+      &::before,
+      &::after {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
+}
