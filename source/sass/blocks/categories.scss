@@ -1,0 +1,142 @@
+.categories {
+  @include container;
+  margin-top: 22px;
+
+  &__list {
+    @include ul-reset;
+  }
+
+  &__item {
+    padding-bottom: 20px;
+  }
+
+  &__article {
+    background-color: #f2f2f2;
+  }
+
+  &__title {
+    @include reset;
+    position: relative;
+    padding-top: 30px;
+    padding-left: 90px;
+    padding-bottom: 15px;
+    font-size: 24px;
+    line-height: 37px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 22px;
+      top: 25px;
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: $green;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 30px;
+      top: 25px;
+      display: block;
+      width: 35px;
+      height: 49px;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__article--slim &__title::after {
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &__article--pro &__title::after {
+    left: 12px;
+    top: 36px;
+    width: 67px;
+    height: 28px;
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+
+  &__content {
+    @include reset;
+    position: relative;
+    padding-top: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 21px;
+    font-family: $arial;
+    font-size: 14px;
+    line-height: 18px;
+    color: $black4;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 20px;
+      right: 20px;
+      height: 1px;
+      background-color: #d9d9d9;
+    }
+  }
+
+  &__link {
+    @include link-reset;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      right: -25px;
+      top: 22px;
+      width: 33px;
+      height: 11px;
+      background-repeat: no-repeat;
+      background-image: url("../img/icon-right-arrow-verylong.svg");
+      background-position: -8px 0;
+      transition: 0.3s;
+    }
+
+    &:hover::before {
+      background-position: 0 0;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &__title {
+      font-size: 36px;
+      line-height: 37px;
+    }
+
+    &__content {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__link {
+      font-size: 20px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &__list {
+      display: flex;
+    }
+  }
+}
