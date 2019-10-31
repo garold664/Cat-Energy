@@ -74,9 +74,15 @@
   }
 
   @media (min-width: $tablet-width) {
+    &__title {
+      padding-top: 18px;
+      padding-bottom: 70px;
+    }
+
     &__list {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     &__item {
@@ -86,8 +92,8 @@
       &::before {
         content: "";
         position: absolute;
-        right: 0;
-        bottom: 0;
+        left: 115px;
+        top: -40px;
         z-index: -1;
         display: block;
         font-size: 281px;
@@ -113,6 +119,10 @@
     }
 
     &__text {
+      padding-left: 0;
+      padding-top: 115px;
+      padding-right: 65px;
+      padding-bottom: 130px;
       font-size: 16px;
       line-height: 24px;
 
