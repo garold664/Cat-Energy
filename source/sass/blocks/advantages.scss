@@ -88,6 +88,7 @@
     &__item {
       position: relative;
       width: 324px;
+      min-height: 235px;
 
       &::before {
         content: "";
@@ -135,6 +136,17 @@
   }
 
   @media (min-width: $desktop-width) {
+    &__title {
+      padding-top: 45px;
+    }
 
+    &__item {
+      width: 245px;
+    }
+
+    &__text {
+      padding-right: 0;
+      padding-bottom: 68px;
+    }
   }
 }
