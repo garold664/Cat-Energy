@@ -16,6 +16,13 @@
       width: 173px;
     }
   }
+
+
+  @media (min-width: $desktop-width) {
+    img {
+      width: 202px;
+    }
+  }
 }
 
 

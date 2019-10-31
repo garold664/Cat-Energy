@@ -31,11 +31,11 @@
       color: $black1;
 
       &:hover {
-        color: rgba($black1, 0.6);
+        opacity: 0.6;
       }
 
       &:active {
-        color: rgba($black1, 0.3);
+        opacity: 0.3;
       }
     }
 
@@ -51,6 +51,20 @@
         right: 0;
         height: 2px;
         background-color: $green;
+      }
+    }
+  }
+
+
+  @media (min-width: $desktop-width) {
+    &__link {
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    &__link--active {
+      &::before {
+        background-color: #ffffff;
       }
     }
   }

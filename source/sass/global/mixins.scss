@@ -72,15 +72,15 @@
 
   outline: 1px solid #0000ff;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     width: 768px;
     padding: 0 30px;
   }
 
-  // @media (min-width: 1300px) {
-  //   width: 1300px;
-  //   padding: 0 40px;
-  // }
+  @media (min-width: $desktop-width) {
+    width: 1300px;
+    padding: 0 40px;
+  }
 
   // @media (max-width: 767px) {
   //   width: 1300px;
