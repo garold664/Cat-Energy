@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.4;
+    background-color: #000000;
+    background-image: url("../psd/preview/cat-energy-index-mobile.jpg");
+
+
+    @media (min-width: $tablet-width) {
+      width: 768px;
+      background-image: url("../psd/preview/cat-energy-index-tablet.jpg");
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 1440px;
+      background-image: url("../psd/preview/cat-energy-index-desktop.jpg");
+    }
+  }
+  // &.catalog-page::after {
+  //   background-image: url("../../psd/preview/device-catalog.jpg");
+  // }
+}
