@@ -1,4 +1,8 @@
 .logo {
+  & picture {
+    display: block;
+  }
+
   &:not([href]) {
     pointer-events: none;
   }

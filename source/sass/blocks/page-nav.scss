@@ -9,12 +9,12 @@
 
     &__list {
       @include ul-reset;
-      padding-top: 8px;
-      margin-right: -36px;
       display: flex;
       flex-wrap: wrap;
-      height: 100%;
       align-items: center;
+      height: 100%;
+      padding-top: 8px;
+      margin-right: -36px;
     }
 
     &__item {

@@ -123,6 +123,7 @@
     &__row {
       display: flex;
       padding-top: 24px;
+      font-size: 0;
     }
 
     &__nav-btn {
@@ -133,7 +134,7 @@
       text-align: left;
     }
 
-    &__container {
+    &__content &__container {
       display: flex;
       flex-direction: column;
     }

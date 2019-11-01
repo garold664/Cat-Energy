@@ -51,7 +51,6 @@
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-
     &__text::after {
       background-size: 50px 50px;
     }
