@@ -1,0 +1,147 @@
+.example {
+  background-color: #f2f2f2;
+
+  &__container {
+    @include container;
+  }
+
+  &__content {
+    padding-top: 16px;
+  }
+
+  &__title {
+    padding-bottom: 24px;
+  }
+
+  &__text {
+    @include reset;
+    padding-right: 5px;
+    padding-bottom: 24px;
+    font-family: $arial;
+    font-size: 14px;
+    line-height: 18px;
+    color: $black4;
+  }
+
+  &__props {
+    @include ul-reset;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  &__prop {
+    width: 124px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__prop-val {
+    padding: 15px 5px;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  &__prop-name {
+    width: 87px;
+    padding: 0 5px;
+    margin: 0 auto;
+    margin-top: -8px;
+    font-family: $arial;
+    font-size: 12px;
+    text-transform: lowercase;
+    background-color: #f2f2f2;
+  }
+
+  &__costs {
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__costs > div {
+    display: inline-block;
+  }
+
+  &__figure {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  &__slides {
+    @include ul-reset;
+    padding-bottom: 32px;
+  }
+
+  &__slide:last-child {
+    display: none;
+  }
+
+  &__fig-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 36px;
+  }
+
+  &__range {
+    position: relative;
+    width: 84px;
+    height: 14px;
+    border: 1px solid #cdcdcd;
+    border-radius: 6px;
+    margin: 0 18px;
+  }
+
+  &__range::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 5px;
+    right: 5px;
+    top: 3px;
+    width: 41%;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $green;
+  }
+
+  &__range-btn {
+    @include button-reset;
+  }
+
+  &__fig-btn {
+    @include link-reset;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $tablet-width) {
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__prop-val {
+      font-size: 30px;
+      line-height: 37px;
+    }
+
+    &__prop-name {
+      font-size: 14px;
+    }
+
+    &__costs {
+      font-size: 20px;
+    }
+
+    &__fig-btn {
+      font-size: 20px;
+    }
+  }
+}
