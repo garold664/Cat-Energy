@@ -65,6 +65,12 @@
   overflow: hidden;
 }
 
+@mixin pseudo {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
 @mixin container {
   width: 320px;
   padding: 0 20px;
