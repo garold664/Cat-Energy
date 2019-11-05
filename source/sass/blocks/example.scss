@@ -178,14 +178,32 @@
     }
 
     &__figure {
+      position: relative;
       width: auto;
       padding-left: 15px;
-      padding-bottom: 36px;
-      background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 170px, #eaeaea 170px);
+    }
+
+    &__figure::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      display: block;
+      left: 0;
+      right: 0;
+      top: 170px;
+      bottom: 0;
+      background-image: linear-gradient(to right, #f2f2f2 0, #f2f2f2 50vw, #eaeaea 50vw);
+    }
+
+    &__figure-wrap {
+      position: relative;
+      width: 690px;
+      padding-bottom: 44px;
+      margin: 0 auto;
     }
 
     &__slides {
-      position: relative;
+      // position: relative;
       width: 690px;
       padding-bottom: 18px;
       margin: 0 auto;
@@ -194,32 +212,38 @@
     }
 
     &__slide {
-      background-color: #ffffff;
-      background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 170px, #eaeaea 170px);
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      background-image: linear-gradient(#ffffff 0%, #ffffff 170px, #eaeaea 170px);
     }
 
     &__slide--before {
-      position: static;
       left: 0;
+      background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 170px, #f2f2f2 170px);
     }
 
-    $shift: -49%;
-
     &__slide--after {
-      position: absolute;
-      top: 0;
-      right: $shift;
-      display: block;
+      right: 0;
+      left: 49%;
+      display: flex;
+      flex-direction: row-reverse;
       overflow: hidden;
     }
 
-    &__slide--after &__img {
+    &__img {
       position: relative;
-      left: $shift;
+      display: block;
+      width: 690px;
+      max-width: none;
+      height: 517px;
     }
 
-    &__img {
-      width: 690px;
+    &__fig-controls {
+      position: relative;
+      padding-top: 25px;
     }
 
     &__range {
@@ -235,7 +259,8 @@
     &__range-btn {
       position: absolute;
       top: -15px;
-      left: 46%;
+      left: 48.4%;
+      transform: translateX(-50%);
       width: 34px;
       height: 34px;
       border-style: solid;
@@ -270,7 +295,16 @@
     }
 
     &__fig-btn {
+      position: absolute;
       font-size: 20px;
+    }
+
+    &__fig-btn:first-child {
+      left: 52px;
+    }
+
+    &__fig-btn:last-child {
+      right: 67px;
     }
   }
 }
