@@ -291,6 +291,7 @@
 
     &__range-btn:active {
       border-color: $green;
+      border-width: 2px;
       outline: none;
     }
 
@@ -308,12 +309,130 @@
       background-image: repeating-linear-gradient(to right, #bebebe 0, #bebebe 1px, transparent 1px, transparent 2px);
     }
 
+    &__fig-btn:hover::before {
+      background-image: none;
+      background-color: #bebebe;
+    }
+
+    &__fig-btn:active::before {
+      background-image: none;
+      background-color: transparent;
+    }
+
     &__fig-btn:first-child {
       left: 60px;
     }
 
     &__fig-btn:last-child {
       right: 60px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    // overflow: hidden;
+    background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 160px, #f2f2f2 160px);
+
+    &::before {
+      @include pseudo;
+      z-index: 100;
+      left: calc(50vw + 630px);
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-image: linear-gradient(#ffffff 0%, #ffffff 160px, #eaeaea 160px);
+      // outline: 2px solid #f00;
+    }
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      width: 1300px;
+      padding: 0 40px;
+      padding-right: 0;
+      margin: 0 auto;
+    }
+
+    & > div {
+      outline: 1px solid #0f0;
+    }
+
+    &__container {
+      width: 440px;
+      padding: 0;
+      margin: 0;
+      margin-right: 120px;
+    }
+
+    &__content {
+      padding-top: 28px;
+      padding-bottom: 38px;
+    }
+
+    &__text {
+      padding-top: 82px;
+      padding-right: 5px;
+    }
+
+    &__info {
+      flex-direction: column;
+    }
+
+    &__props {
+      justify-content: flex-start;
+      padding-top: 15px;
+    }
+
+    &__prop {
+      margin-right: 42px;
+    }
+
+    &__prop-name {
+      background-color: #f2f2f2;
+    }
+
+    &__costs {
+      display: flex;
+      padding-top: 32px;
+      margin: 0;
+    }
+
+    &__costs &__costs-val {
+      flex-grow: 1;
+      padding-right: 46px;
+      text-align: center;
+    }
+
+    &__slides {
+      margin-top: -30px;
+    }
+
+    &__slide {
+      z-index: auto;
+    }
+
+    &__slide--before {
+      background-image: linear-gradient(to bottom, #ffffff 0, #ffffff 190px, #f2f2f2 190px);
+    }
+
+    &__slide--after {
+      left: 53.7%;
+      background-image: linear-gradient(#ffffff 0%, #ffffff 190px, #eaeaea 190px);
+    }
+
+
+    &__fig-controls {
+      width: 570px;
+      padding-top: 50px;
+      margin-left: 85px;
+    }
+
+    &__fig-btn:first-child {
+      left: 0;
+    }
+
+    &__fig-btn:last-child {
+      right: 0;
     }
   }
 }
