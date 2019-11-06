@@ -9,5 +9,6 @@
 *.css
 node_modules/
 build/
+review/
 psd/
 Thumbs.db

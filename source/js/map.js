@@ -2,7 +2,9 @@
 var map;
 function initMap() {
   var myLatLng = {lat: 59.938872, lng: 30.323047};
-  var image = 'img/map-pin.png';
+  var image = {
+    url: 'img/map-pin.png'
+  };
 
   var map = new google.maps.Map(document.getElementById('map'), {
     center: myLatLng,
