@@ -26,12 +26,14 @@
 
   &__social-link {
     @include link-reset;
+    display: block;
     padding: 0 19px;
   }
 
   &__social-icon {
+    display: block;
     // pointer-events: none;
-     -ms-user-select: none
+     // -ms-user-select: none
   }
 
   &__social-link:hover &__social-icon,
@@ -70,5 +72,57 @@
 
   &__academy-link:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 54px;
+      padding-bottom: 54px;
+    }
+
+    &__logo {
+      padding: 0;
+      border: none;
+    }
+
+    &__logo img {
+      width: 128px;
+    }
+
+    &__socials {
+      padding: 0;
+      padding-right: 20px;
+      border: none;
+    }
+
+    &__social-link {
+      padding: 0 14px;
+    }
+
+    &__social-icon--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &__social-icon--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &__social-icon--fb {
+      width: 14px;
+      height: 28px;
+    }
+
+    &__academy {
+      padding: 0;
+    }
+
+    &__academy-name {
+      padding-right: 16px;
+    }
   }
 }
