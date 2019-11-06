@@ -1,0 +1,32 @@
+.contacts {
+  &__address-wrap {
+    @include container;
+    display: flex;
+    padding-top: 28px;
+    padding-bottom: 26px;
+    outline: 1px solid #0ff;
+  }
+
+  &__col {
+    width: 140px;
+    font-family: $arial;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__col--lead {
+    font-family: $oswald;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__map {
+    height: 362px;
+  }
+
+  &__map iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
