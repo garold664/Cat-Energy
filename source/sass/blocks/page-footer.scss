@@ -25,15 +25,21 @@
   }
 
   &__social-link {
+    @include link-reset;
     padding: 0 19px;
   }
 
-  &__social-link:hover &__social-icon {
+  &__social-icon {
+    // pointer-events: none;
+     -ms-user-select: none
+  }
+
+  &__social-link:hover &__social-icon,
+  &__social-link:active &__social-icon {
     fill: $green;
   }
 
-  &__social-link:active &__social-icon {
-    fill: $green;
+  &__social-link:active {
     opacity: 0.3;
   }
 
@@ -57,12 +63,12 @@
     margin-right: -6px;
   }
 
-  &__academy-link:hover &__academy-icon {
+  &__academy-link:hover &__academy-icon,
+  &__academy-link:active &__academy-icon {
     fill: $green;
   }
 
   &__academy-link:active {
-    fill: $green;
     opacity: 0.3;
   }
 }
